@@ -1,0 +1,234 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-image: url("../img/bg.jpg");
+    position: relative;
+    text-align: center;
+}
+
+@font-face {                    /*喇叭字体图标*/
+    font-family: "MyIcon";      /*必需。规定字体的名称。*/
+    src: url("../font/glyphicons-halflings-regular.woff2"); /*必需。定义字体文件的 URL。*/
+}
+
+/*首页头部*/
+.header {
+    width: 100%;
+    height: 50px;
+    background: #191818;
+}
+
+.container {
+    position: relative;
+    width: 1170px;
+    height: 50px;
+    margin: 0px auto;
+    /*background: pink;*/
+}
+
+.title {
+    display: inline-block;
+    float: left;
+    color: #eeeeee;
+    line-height: 50px;
+    text-decoration: none;
+    margin: 0px 15px;
+    font-size: 18px;
+}
+
+.menu {
+    /*background: blue;*/
+    float: left;
+}
+
+.menu > li {
+    display: inline-block;
+    float: left;
+    height: 50px;
+    width: 58px;
+    color: #eeeeee;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.menu > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.search_bar > input {   /*相对于.container父级定位*/
+    display: inline-block;
+    position: absolute;
+    height: 22px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid;
+    font-size: 14px;
+    top: 50%;
+    margin-top: -17px;
+    right: 60px;
+}
+
+.search_bar > button {  /*button的height=content+padding+border  20+10+2*/
+    display: inline-block;
+    position: absolute;
+    width: 54px;
+    height: 34px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    top: 50%;
+    margin-top: -17px;
+    outline: none;
+    color: #555555;
+    right: 0px;
+    background: white;
+}
+
+/*首页中间内容  左右两栏布局   没有设置高度，display: inline-block;随内容撑开*/
+.content {
+    display: inline-block;
+    position: relative;
+    /*很多网站中间有内容，两边没有内容，因为要兼容古老的显示器，现在是1920*1080再早之前是1366*768*/
+    width: 1170px;
+    margin: 30px auto 0px auto;
+}
+
+.content_left {
+    float: left;
+    width: 66%;
+    padding: 0px 20px 0px 0px;
+    box-sizing: border-box; /*为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制。*/
+}
+
+.content_right {
+    float: right;
+    width: 34%;
+    padding: 0px 0px 0px 0px;
+}
+
+
+/*首页右侧*/
+.right_moodule {
+    display: inline-block;
+    width: 100%;
+    background: #1f1f1f;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    padding: 0px 15px 25px 15px;
+    margin-bottom: 20px;
+}
+.right_moodule div {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    padding: 15px 5px 15px 0px;
+    color: dodgerblue;
+}
+/*随机标签云*/
+.right_moodule > a {
+    display: inline-block;
+    font-size: 14px;
+    color: dodgerblue;
+    margin-right: 5px;
+    text-decoration: none;
+}
+/*最近热门*/
+.right_moodule > ul > li {
+    list-style: none;
+    color: white;
+    padding: 8px 0px;
+    border-bottom: 1px solid #292929;
+}
+.right_moodule > ul > li > a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+/*最新评论*/
+.right_moodule > ul > li > div {
+    padding: 5px 0px;
+}
+.right_moodule > ul > li > div > span{
+    font-size: 14px;
+    color: white;
+}
+.right_moodule > ul > li > p {
+    font-size: 14px;
+    color: #777777;
+}
+.pull_right {                   /*时间靠右侧单独设置*/
+    position: absolute;
+    right: 15px;
+}
+/*友情链接*/
+.right_moodule > span {
+    display: inline-block;  /*inline-block自动进入到流式布局，width每个50%，两个正好100%*/
+    width: 50%;
+    height: 30px;
+    margin-top: 10px;
+}
+.right_moodule > span > a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+
+/*首页底部*/
+.footer {
+    width: 100%;
+    height: 60px;
+    background: #191818;
+    text-align: center;
+    padding: 20px;
+}
+.footer > ul {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+.footer > ul > li {
+    display: inline-block;
+    color: #a2a2a2;
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+.footer > p {
+    margin-top: 10px;
+    color: #a2a2a2;
+}
+
+
+/*翻页样式*/
+.page_tool {
+    margin-top: 20px;
+    display: inline-block;
+}
+.page_tool > ul > li {
+    display: inline-block;
+    list-style: none;
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    background: white;
+    text-align: center;
+    border: 1px solid black;
+    float: left;
+    cursor: pointer;
+}
+.page_tool > ul > li:hover {
+    background: gray;
+}
+.now_page {     /*v-bind:class=满足条件时候改变的样式*/
+    background: #333 !important;
+    color: #fff !important;
+}
