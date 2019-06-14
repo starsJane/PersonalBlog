@@ -70,7 +70,7 @@
     <div class="content_right">
         <div class="right_moodule" id="random_tags">
             <div>随机标签云</div>
-            <a href="/" v-for="tag in tags" v-bind:style="{color:randomColor(), fontSize:randomSize()}">{{tag}}</a>
+            <a v-for="tag in tags" v-bind:style="{color:randomColor(), fontSize:randomSize()}" v-bind:href="tag.link" >{{tag.text}}</a>
         </div>
         <div class="right_moodule" id="new_hot">
             <div>最近热门</div>
